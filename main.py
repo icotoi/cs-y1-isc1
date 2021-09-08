@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 import numpy as np
 
-from money import MoneyModel
+from gossip import GossipModel
 import matplotlib.pyplot as plt
 
 
-m = MoneyModel(50, 10, 10)
+m = GossipModel(10, 10, 10)
 
 for i in range(20):
     m.step()
