@@ -2,10 +2,11 @@
 from mesa.visualization.ModularVisualization import ModularServer
 from mesa.visualization.modules import CanvasGrid, ChartModule
 
-from gossip import GossipModel
+from stigmergy import StigmergyModel
 
 
 def agent_portrayal(agent):
+    print(agent)
     portrayal = {
         "Shape": "circle",
         "Filled": "true",
@@ -30,9 +31,9 @@ chart = ChartModule([{"Label": "Secrets",
                       "Color": "Black"}],
                     data_collector_name='datacollector')
 
-server = ModularServer(GossipModel,
+server = ModularServer(StigmergyModel,
                        [grid, chart],
-                       "Gossip Model",
+                       "Stigmergy Model",
                        {
                            "n": 10,
                            "width": 10,
